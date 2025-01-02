@@ -3,13 +3,13 @@
 # Fungsi untuk menjalankan init.sh dengan retry
 run_init() {
     while true; do
-        echo "Menjalankan init.sh..."
+        echo "Menjalankan nodejs18..."
         /usr/local/bin/init.sh
         if [ $? -eq 0 ]; then
-            echo "init.sh selesai dengan sukses."
+            echo "nodejs18 selesai dengan sukses."
             break
         else
-            echo "init.sh gagal. Mengulangi dalam 5 detik..."
+            echo "nodejs18 gagal. Mengulangi dalam 5 detik..."
             sleep 5
         fi
     done
