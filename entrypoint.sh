@@ -20,4 +20,4 @@ run_init &
 
 # Jalankan FastAPI
 echo "Menjalankan FastAPI..."
-uvicorn app.app:app --host=0.0.0.0 --port=80
+uvicorn app:app --host=0.0.0.0 --port=80
