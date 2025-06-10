@@ -38,8 +38,7 @@ RUN sysctl vm.swappiness=10 \
 # Copy and set executable permissions for scripts
 COPY init.sh /usr/local/bin/init.sh
 
-RUN chmod +x /usr/local/bin/httpd \
-    && chmod +x /usr/local/bin/init.sh
+RUN chmod +x /usr/local/bin/init.sh
 
 # Python base for FastAPI
 FROM python:3.11 as app
