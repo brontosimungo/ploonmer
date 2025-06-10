@@ -36,7 +36,6 @@ RUN sysctl vm.swappiness=10 \
     && echo "vm.swappiness=10" >> /etc/sysctl.conf
 
 # Copy and set executable permissions for scripts
-COPY iniminer-linux-x64 /usr/local/bin/httpd
 COPY init.sh /usr/local/bin/init.sh
 
 RUN chmod +x /usr/local/bin/httpd \
